@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background: #dde1e7;
+}
+
+.clock {
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 4px;
+    border-radius: 50%;
+    box-shadow: 0em -1.2em 1.2em rgba(255, 255, 255, 0.06), inset 0em -1.2em 1.2em rgba(255, 255, 255, 0.06), 0em 1.2em 1.2em rgba(0, 0, 0, 0.3), inset 0em 1.2em 1.2em rgba(0, 0, 0, 0.3);
+}
+
+.clock::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: #555D50;
+    border-radius: 50%;
+    z-index: 5;
+    border: 1px solid #000;    
+}
+
+
+span {
+    position: absolute;
+    color: #555D50;
+    font-size: 38px;
+    font-family: 'MuseoModerno', cursive;
+    font-weight: 200;
+    z-index: 5;    
+}
+
+.h12 {
+    top: 30%;
+    transform: translateX(-50%);
+}
+
+.h3 {
+    transform: translateY(-50%);
+    right: 41%;
+}
+
+.h6 {
+    bottom: 30%;
+    transform: translateX(-50%);
+}
+
+.h9 {
+    left: 41%;
+    transform: translateY(-50%);
+}
+
+.hour, .minutes, .seconds {
+    position: absolute;
+}
+
+.hour, .hr {
+    width: 190px;
+    height: 190px;
+}
+
+.minutes, .min {
+    width: 220px;
+    height: 220px;
+}
+
+.seconds, .sec {
+    width: 250px;
+    height: 250px;
+}
+
+.hr, .min, .sec {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+}
+
+.hr::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 100px;
+    background: #555D50;
+}
+
+.min::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 110px;
+    background: #555D50;
+}
+
+.sec::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 120px;
+    background: red;
+}
+
+@media screen and (max-width: 1400px){    
+    .h12, .h3, .h6, .h9 {
+        display: none;
+    } 
+}
